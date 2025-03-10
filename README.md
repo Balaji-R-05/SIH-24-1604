@@ -1,42 +1,68 @@
 # Conversational Image Recognition Chatbot (SIH'24 1604)
 
-![Project Banner](https://via.placeholder.com/800x200?text=Conversational+Image+Recognition+Chatbot) <!-- Add your banner image -->
-
 A deep learning-powered chatbot that combines **computer vision** and **natural language processing** to analyze images and answer user questions about visual content.
 
 ---
 
 ## 📌 Project Overview
+This project aims to build a **Conversational Image Recognition Chatbot** that combines **Natural Language Processing (NLP)** and **Computer Vision (CV)**. The chatbot will:
+1. Recognize objects in an image uploaded by the user.
+2. Understand user queries about the image.
+3. Generate relevant and grammatically correct responses.
 
-### Background
-While AI-powered chatbots like Siri and Google Assistant excel at text-based interactions, integrating image understanding with natural conversation remains a challenge. This project addresses this gap by building a **multimodal chatbot** that can:
-1. **Detect objects** in user-uploaded images
-2. **Answer questions** about image content
-3. **Generate grammatically correct responses** in natural language
-
-### Expected Solution
-- **Input**: Image + Text Query (e.g., "What is the dog playing with?")
-- **Output**: Context-aware, lexically correct response (e.g., "The dog is playing with a red frisbee in the park.")
-
----
-
-## 🗃️ Dataset
-
-We use industry-standard datasets for robust model training:
-
-| Dataset       | Purpose                          | Size          | Features                             |
-|---------------|----------------------------------|---------------|--------------------------------------|
-| **[COCO](https://cocodataset.org/)** | Primary Training Data | 330K+ images | Object detection + VQA annotations   |
-| ImageNet      | Transfer Learning               | 14M+ images  | General object recognition           |
-| VQA v2        | Question-Answer Pairs           | 1.1M QA pairs | Visual question answering            |
-
-**Why COCO?**
-- Provides bounding boxes, segmentation masks, and captions
-- Includes pre-trained baselines for VQA tasks
-- Industry standard for multimodal AI research
+### Key Features
+- **Image Recognition**: Detect objects in an image using a deep learning model.
+- **Conversational Ability**: Understand user queries and generate responses using NLP.
+- **Integration**: Combine image recognition and conversational capabilities into a single system.
 
 ---
 
-## 🛠️ Technical Approach
+## Project Requirements
 
-### Architecture
+### Functional Requirements
+1. **Image Upload**: Users can upload an image to the chatbot.
+2. **Object Detection**: The chatbot detects objects in the image.
+3. **Query Handling**: Users can ask questions about the image (e.g., "What is in the image?").
+4. **Response Generation**: The chatbot generates a response based on the detected objects and user query.
+
+### Non-Functional Requirements
+1. **Performance**: The chatbot should respond within a reasonable time (e.g., < 5 seconds).
+2. **Scalability**: The system should handle multiple users simultaneously.
+3. **Accuracy**: The chatbot should accurately detect objects and generate relevant responses.
+
+---
+
+## Tools and Technologies
+
+### Programming Language
+- **Python**: The primary language for AI/ML development.
+
+### Libraries and Frameworks
+1. **Computer Vision**:
+   - **PyTorch** or **TensorFlow**: For building and training the image recognition model.
+   - **OpenCV**: For image processing.
+2. **Natural Language Processing**:
+   - **Hugging Face Transformers**: For pre-trained language models like GPT-2 or T5.
+   - **NLTK** or **spaCy**: For text preprocessing.
+3. **Web Framework**:
+   - **Flask** or **FastAPI**: For building the chatbot interface.
+
+### Datasets
+1. **Image Recognition**:
+   - **COCO (Common Objects in Context)**: A large-scale dataset for object detection.
+   - **ImageNet**: A dataset for image classification.
+2. **Conversational Model**:
+   - **Cornell Movie Dialogs Corpus**: A dataset for training conversational models.
+
+## Development Environment Setup
+
+### Prerequisites
+1. **Python 3.8+**: Install Python from [python.org](https://www.python.org/).
+2. **Git**: Install Git from [git-scm.com](https://git-scm.com/).
+3. **Virtual Environment**: Use `venv` or `conda` to create an isolated environment.
+
+### Installation Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/conversational-image-chatbot.git
+   cd conversational-image-chatbot
